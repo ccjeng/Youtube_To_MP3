@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
 <html lang="en-us">
 
 <head>
     <meta charset="utf-8">
-    <title>Youtube to Mp3 downloader</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <title>Youtube 轉 Mp3 下載器</title>   
+    
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 </head>
 <body>
-Youtube to Mp3 Download
-<form action="">
-    <input type="text" id="youtubeURL" value="" onclick="" style="width:500px" autocomplete="off" />          
-    
-    <div id="btns">
-        <input type="submit" value="Submit">
-        <input type="button" id="clean" value="Clean">
-    </div>
-</form>
+
+
+<div class="form-group" id="form">
+    <form action="">
+        <label for="YoutubeURL">Youtube 轉 MP3 下載器</label>
+        <input type="text" id="youtubeURL" class="form-control" value="" autocomplete="off" />          
+        <span class="glyphicon form-control-feedback"></span>
+        <input type="submit" class="btn btn-primary" value="送出">
+        <input type="button" class="btn btn-primary" id="clean" value="清除">
+    </form>
+</div>
 
 <a href="http://www.yt-mp3.com/" id="ytmp3" onClick="return YoutubeMp3Script(this)">
 <!--<a href="javascript:ytc('1oVoT9CnjK0');" id="ytmp3" ></a> -->
@@ -24,36 +31,8 @@ Youtube to Mp3 Download
 <!--http://www.youtubemp3script.com/-->
 <script src="http://www.youtubemp3script.com/api/youtubemp3script-v1.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="/script/main.js"></script>
 <!--<script src="http://www.video2mp3.cc/api/script.js"></script>-->
-
-<script>
-
-//https://www.youtube.com/watch?v=YI5CLMcvnpY
-
-    $(document).ready(function(){
-        $("form").submit(function(e){
-        e.preventDefault();
-        var youtube  = $("#youtubeURL").val();
-        var youtube_id = get_youtube_id(youtube);
-        var download_url = "http://www.yt-mp3.com/watch?v=" + youtube_id;
-        //change download url
-        $("a#ytmp3").attr("href", download_url);
-        //$("a#ytmp3").attr("href", "javascript:ytc('" + youtube_id + "');");
-        $("a#ytmp3").text('Download');
-      });
-  
-    $("#clean").click(function() {
-        $("#youtubeURL").val("");
-        $("a#ytmp3").text('');
-    });
-  
-});
-
-function get_youtube_id(url) {
-    return url.match(/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/user\/\S+|\/ytscreeningroom\?v=|\/sandalsResorts#\w\/\w\/.*\/))([^\/&]{10,12})/)[1]; 
-}
-
-</script>
 </body>
 </html>
