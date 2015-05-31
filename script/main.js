@@ -21,7 +21,6 @@ $(document).ready(function() {
                  var download_url = "http://www.yt-mp3.com/watch?v=" + youtube_id;
                 //change download url
                 $("a#ytmp3").attr("href", download_url);
-                //$("a#ytmp3").attr("href", "javascript:ytc('" + youtube_id + "');");
                 $("a#ytmp3").text('點這裡下載 MP3');
             }
             
@@ -33,7 +32,6 @@ $(document).ready(function() {
             $("a#ytmp3").text("");
             $("#form").removeClass("has-error").removeClass("has-success");
             $(".glyphicon").removeClass("glyphicon-remove").removeClass("glyphicon-ok");
-                
         });
 
     });
