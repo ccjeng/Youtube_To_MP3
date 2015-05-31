@@ -7,8 +7,6 @@ $(document).ready(function() {
             $("#error").val("");
             if (!get_youtube_id(youtube)) {
                 //Error
-                $("#error").text("Youtube URL format is not correct");
-                
                 $("#form").removeClass("has-success").addClass("has-error");
                 $(".glyphicon").removeClass("glyphicon-ok").addClass("glyphicon-remove");    
         
@@ -21,7 +19,7 @@ $(document).ready(function() {
                  var download_url = "http://www.yt-mp3.com/watch?v=" + youtube_id;
                 //change download url
                 $("a#ytmp3").attr("href", download_url);
-                $("a#ytmp3").text('點這裡下載 MP3');
+                $("#ytmp3")[0].click();
             }
             
 
