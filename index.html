@@ -23,28 +23,31 @@
 
 </head>
 <body>
+<br/>
+<br/>
 
-
-<div class="form-group" id="form">
-    <form action="">
-        <label for="YoutubeURL">Youtube 轉 MP3 下載器</label>
-        <input type="text" id="youtubeURL" class="form-control" value="" autocomplete="off" />          
-        <span class="glyphicon form-control-feedback"></span>
+<div class="form-group" id="form" style="text-align:center;">
+    <form role="form" action="">
+        <h3>Youtube 轉 MP3 下載器</h3>
+        <br/>
+        <div class="form-group has-feedback ">
+            <input type="text" id="youtubeURL" class="form-control" value="" placeholder="貼上包含YouTube連結的字串"/>          
+            <span class="glyphicon form-control-feedback"></span>
+        </div>
+        
         <input type="submit" class="btn btn-primary" value="送出">
         <input type="button" class="btn btn-primary" id="clean" value="清除">
     </form>
 </div>
 
 <a href="http://www.yt-mp3.com/" id="ytmp3" onClick="return YoutubeMp3Script(this)">
-<!--<a href="javascript:ytc('1oVoT9CnjK0');" id="ytmp3" ></a> -->
 </a>
 
 <!--http://www.youtubemp3script.com/-->
 <script src="http://www.youtubemp3script.com/api/youtubemp3script-v1.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="./script/main.js"></script>
-<!--<script src="http://www.video2mp3.cc/api/script.js"></script>-->
+<script src="./script/main.js?20150531"></script>
 
 </body>
 </html>
