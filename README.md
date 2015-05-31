@@ -2,8 +2,14 @@
 
 ## Site: http://ccjeng.github.io/Youtube_To_MP3/
 
-## The technology which this project is using:
-### Youtube Mp3 converter service: http://www.youtubemp3script.com/
-### Regular Express Validation : https://regex101.com/#javascript
+* Get YouTube ID from numerous text
+* Pass YouTube ID to Youtube Mp3 converter service
 
+
+### Tools
+* Youtube Mp3 converter service: http://www.youtubemp3script.com/
+* Regular Express Validation : https://regex101.com/#javascript
+* JQuery: https://jquery.com/
+* Bootstrap: http://getbootstrap.com/
+* Glyphicon: http://glyphicons.com/
 
