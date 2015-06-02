@@ -21,7 +21,7 @@
         ga('send', 'pageview');
     </script>
 
-     <script src='http://my.mobfox.com/nativead.js'></script>
+    <script src='http://my.mobfox.com/ad.js'></script>
 
 </head>
 <body>
@@ -46,23 +46,28 @@
 </a>
 
 
-<!--Place the code below where you want an ad to appear. -->
-<span id="native_ad_1"></span>
-
-
 <!--http://www.youtubemp3script.com/-->
 <script src="http://www.youtubemp3script.com/api/youtubemp3script-v1.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="./script/main.js?20150531"></script>
 
+
+<!--Place the code below everywhere where you want an ad to appear. -->
+
 <script>
-request_native_ad({
-html_template:'<style>.adwidget{position:relative;width:100%;border:1px solid #ccc;font:12px/20px "Lucida Grande",Verdana,sans-serif;color:#404040;background:#eee}.adwidget-list-link{display:block;line-height:26px;padding:10px 12px;font-weight:bold;color:#555;text-decoration:none}.adwidget-list-link:hover{background:#f7f7f7}.adwidget-list-link>img{float:left;width:50px;height:50px;margin:2px 12px 0 0}</style><div style="" class="adwidget"><ol style="list-style:none;margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline"><li style="list-style:none"><a href="NATIVEASSET:CLICKURL" class="adwidget-list-link"><img src="NATIVEASSET:IMAGE:ICON">NATIVEASSET:TEXT:HEADLINE - NATIVEASSET:TEXT:RATING Stars <span style="display:block;font-size:11px;font-weight:normal;color:#999">By NATIVEASSET:TEXT:ADVERTISER - NATIVEASSET:TEXT:CTA</span></a></li></ol></div>',
-publisher_id:'72cbbbd19f05070b5944acb26e1fc785',
-allowed_ad_types:'', /* Leave Empty for no Restriction */
-ad_num:1
-});
+RequestAd_({
+
+    // Ad Request Variables
+    s:'72cbbbd19f05070b5944acb26e1fc785',
+    m:'live', <!-- Change to 'test' to show a test ad -->
+    adspace_width:'320', <!-- Maximum Width of your Banner -->
+    adspace_height:'50', <!-- Maximum Height of your Banner -->
+    adspace_strict:'0', <!-- If you change this parameter to 1, the ad size set above will be strict and no smaller ads will be shown. -->
+    backfillhtml:'', <!-- Insert HTML Code here that should be shown when no ad is available -->
+    prependclickcontent:'', <!-- Prepend something before Click URLs. It is recommended to leave this parameter empty.  -->
+    trackingpixelurl:'' <!-- Ping a Tracking Pixel everytime an ad is shown. -->
+	});
 </script>
 </body>
 </html>
