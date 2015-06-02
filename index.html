@@ -21,6 +21,8 @@
         ga('send', 'pageview');
     </script>
 
+     <script src='http://my.mobfox.com/nativead.js'></script>
+
 </head>
 <body>
 <br/>
@@ -43,11 +45,24 @@
 <a href="http://www.yt-mp3.com/" id="ytmp3" onClick="return YoutubeMp3Script(this)">
 </a>
 
+
+<!--Place the code below where you want an ad to appear. -->
+<span id="native_ad_1"></span>
+
+
 <!--http://www.youtubemp3script.com/-->
 <script src="http://www.youtubemp3script.com/api/youtubemp3script-v1.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="./script/main.js?20150531"></script>
 
+<script>
+request_native_ad({
+html_template:'<style>.adwidget{position:relative;width:100%;border:1px solid #ccc;font:12px/20px "Lucida Grande",Verdana,sans-serif;color:#404040;background:#eee}.adwidget-list-link{display:block;line-height:26px;padding:10px 12px;font-weight:bold;color:#555;text-decoration:none}.adwidget-list-link:hover{background:#f7f7f7}.adwidget-list-link>img{float:left;width:50px;height:50px;margin:2px 12px 0 0}</style><div style="" class="adwidget"><ol style="list-style:none;margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline"><li style="list-style:none"><a href="NATIVEASSET:CLICKURL" class="adwidget-list-link"><img src="NATIVEASSET:IMAGE:ICON">NATIVEASSET:TEXT:HEADLINE - NATIVEASSET:TEXT:RATING Stars <span style="display:block;font-size:11px;font-weight:normal;color:#999">By NATIVEASSET:TEXT:ADVERTISER - NATIVEASSET:TEXT:CTA</span></a></li></ol></div>',
+publisher_id:'72cbbbd19f05070b5944acb26e1fc785',
+allowed_ad_types:'', /* Leave Empty for no Restriction */
+ad_num:1
+});
+</script>
 </body>
 </html>
