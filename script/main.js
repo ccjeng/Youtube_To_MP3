@@ -16,8 +16,9 @@ $(document).ready(function() {
                 $(".glyphicon").removeClass("glyphicon-remove").addClass("glyphicon-ok");
             
                 youtube_id = get_youtube_id(youtube)[1];
-                var download_url = "http://youtubeinmp3.com/fetch/?video=http://www.youtube.com/watch?v=" + youtube_id;
-                 
+                var logo_url ="http://ccjeng.github.io/Youtube_To_MP3/img/icon.png";
+                 var download_url = "http://www.yt-mp3.com/watch?v=" + youtube_id + "&logo=" + logo_url;
+
                 //change download url
                 $("a#ytmp3").attr("href", download_url);
                 $("#ytmp3")[0].click();
