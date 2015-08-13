@@ -1,6 +1,6 @@
 #YouTube to MP3 Converter
 
-## [Site] (http://ccjeng.github.io/Youtube_To_MP3/)
+## [Site] (http://Youtube_To_MP3.ccjeng.com)
 
 * Get YouTube ID from numerous text
 * Pass YouTube ID to Youtube Mp3 converter service
@@ -13,4 +13,5 @@
 * [Bootstrap] (http://getbootstrap.com/)
 * [Glyphicon] (http://glyphicons.com/)
 
-
+**License**
+http://ccjeng.mit-license.org
